@@ -9,15 +9,6 @@ import matplotlib.pyplot as plt
 from utils import utils as cmp_utils
 import gc
 
-grid = {
-    'cos_lr': [True, False],
-    'momentum': [0.937, 0.9, 0.95, 0.99],
-    'weight_decay': [0.0005, 0.001, 0.002, 0.005, 0.0001, 0.00001],
-    'warmup_epochs': [10, 50, 100, 150],
-    'warmup_momentum': [0.7, 0.8, 0.9, 0.95, 0.99],
-    'warmup_bias_lr': [0.1, 0.2, 0.3, 0.05, 0.001],
-}
-
 
 def load_data(data_dir):
     data_dir = os.path.join(os.getcwd(), data_dir)
