@@ -2,4 +2,5 @@ _notebooks/
 .env
 __pycache__/
 data*/
+!utils/data
 artifacts/

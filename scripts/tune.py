@@ -1,12 +1,12 @@
 import os
 import optuna
 from ultralytics import YOLO
-from solutions.utils import disk
+from utils import disk
 import numpy as np
 from copy import deepcopy
 from skimage.draw import polygon
 import matplotlib.pyplot as plt
-from dm_i_ai_2025.tumor_segmentation import utils as cmp_utils
+from utils import utils as cmp_utils
 import gc
 
 grid = {
