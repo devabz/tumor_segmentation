@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from itertools import chain
+from skimage import measure
 
 def extract_bounding_coordinates_from_label_image(label_image: np.ndarray, true_pixel_value=(0, 0, 255)) -> set:
     # Perform a filtering operation
@@ -37,7 +38,6 @@ def extract_bounding_coordinates_from_label_image(label_image: np.ndarray, true_
     return coords, buckets
 
 
-from skimage import measure
 def extract_bounding_coordinates_from_label_image(label_image: np.ndarray, true_pixel_value=(0, 0, 255), level: float = 0.5) -> set:
     mask = (label_image == true_pixel_value).all(axis=-1)
     contours = measure.find_contours(mask, level=level)
